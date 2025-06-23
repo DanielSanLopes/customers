@@ -1,11 +1,16 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  background-color: #282c34;
+  justify-content:top;
+  padding-top: 5%;
+  align-items: center;
+  height: 100vh;
+  color:white;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,12 +19,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -34,5 +38,110 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+label{
+  text-align: left;
+  color: white;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  width: 720px;
+  list-style-type: none;
+  padding: 0;
+  padding-right: 15px;
+  gap: 10px;
+  overflow-y: scroll;
+  height: 400px;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  align-items: last baseline;
+  gap: 30px;
+  margin: 20px;
+}
+
+.inputText{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: black;
+}
+
+.addButton{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #61dafb;
+  color: black;
+  cursor: pointer;
+}
+
+.addButton:hover{
+  background-color: #21a1f1;
+}
+
+.reportButton{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0px;
+  border-radius: 45px;
+  border: none;
+  background-color: #61dafb;
+  letter-spacing: 1px;
+  color: black;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  animation: scaling 10s infinite;
+  box-shadow: hsla(0, 0%, 0%, 0.418) 0px 0px 15px 5px;
+  font-size: 12px;
+}
+
+.reportButton:hover{
+  background-color: #21a1f1;
+}
+
+.form-item{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  border-radius: 10px;
+  border-bottom: 1px solid #ccc;
+  margin: 0px;
+  gap: 0px;
+}
+
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+    top: 10px;
+    left: 10px;
+  }
+  50% {
+    transform: scale(1.2);
+    top: calc(10px + calc(10px * 0.2));
+    left: calc(10px + calc(10px * 0.2));
+  }
+  100% {
+    transform: scale(1);
+    top: 10px;
+    left: 10px;
   }
 }
